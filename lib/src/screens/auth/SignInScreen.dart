@@ -1,3 +1,4 @@
+import 'package:clothes_shop/src/widgets/CustomText.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -16,8 +17,8 @@ class SignInScreen extends StatelessWidget {
                   height: 72,
                   child: Image.asset('assets/images/logo_white.png')),
             )),
-        const Text("Welcome to Lafyuu"),
-        const Text("Sign in to continue"),
+        const CustomText(text: "Welcome to Lafyuu", paddingTop: 16,),
+        const CustomText(text: "Sign in to continue", paddingTop: 8, textColor: 0xff9098B1,),
         const TextField(
           decoration: InputDecoration(labelText: "Your email"),
         ),

@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
         home: Scaffold(
             body: SafeArea(
                 child: Center(
-      child: SplashScreen()
+      child: SignInScreen()
     ))));
   }
 }
