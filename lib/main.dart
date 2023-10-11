@@ -1,5 +1,6 @@
 import 'package:clothes_shop/src/screens/auth/RegisterScreen.dart';
 import 'package:clothes_shop/src/screens/auth/SignInScreen.dart';
+import 'package:clothes_shop/src/screens/auth/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MainApp extends StatelessWidget {
         home: Scaffold(
             body: SafeArea(
                 child: Center(
-      child: RegisterScreen()
+      child: SplashScreen()
     ))));
   }
 }
