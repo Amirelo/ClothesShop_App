@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomText extends StatelessWidget {
   final String text;
-  final int textColor;
+  final Color textColor;
   final double paddingTop;
   final double paddingBottom;
   final double paddingLeft;
@@ -10,11 +10,11 @@ class CustomText extends StatelessWidget {
 
   final FontWeight fontWeight;
   final double fontSize;
-  
+
   const CustomText(
       {super.key,
       required this.text,
-      this.textColor = 0xff212121,
+      this.textColor = const Color(0xff212121),
       this.paddingTop = 0,
       this.paddingBottom = 0,
       this.paddingLeft = 0,
@@ -33,7 +33,7 @@ class CustomText extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          color: Color(textColor), 
+          color: textColor, 
           fontWeight: fontWeight,
           fontSize: fontSize,
           ),
