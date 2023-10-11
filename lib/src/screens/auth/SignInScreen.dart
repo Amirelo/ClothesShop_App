@@ -17,7 +17,7 @@ class SignInScreen extends StatelessWidget {
                   height: 72,
                   child: Image.asset('assets/images/logo_white.png')),
             )),
-        const CustomText(text: "Welcome to Lafyuu", paddingTop: 16,),
+        const CustomText(text: "Welcome to Lafyuu", paddingTop: 16, fontSize: 20,),
         const CustomText(text: "Sign in to continue", paddingTop: 8, textColor: 0xff9098B1,),
         const TextField(
           decoration: InputDecoration(labelText: "Your email"),
@@ -27,7 +27,7 @@ class SignInScreen extends StatelessWidget {
           decoration: InputDecoration(labelText: "Password"),
         ),
         const ElevatedButton(onPressed: null, child: Text("Sign in")),
-        const Text("OR"),
+        const CustomText(text: "OR", textColor: 0xff9098B1,),
         const ElevatedButton(onPressed: null, child: Text("Login with Google")),
         const ElevatedButton(
             onPressed: null, child: Text("Login with Facebook")),
