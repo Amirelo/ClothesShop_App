@@ -18,8 +18,17 @@ class SignInScreen extends StatelessWidget {
                   height: 72,
                   child: Image.asset('assets/images/logo_white.png')),
             )),
-        CustomText(text: "Welcome to Lafyuu", paddingTop: 16, fontSize: 16, textColor: ThemeDefault().primaryColor,),
-        CustomText(text: "Sign in to continue", paddingTop: 8, textColor: ThemeDefault().secondaryTextColor,),
+        CustomText(
+          text: "Welcome to Lafyuu",
+          paddingTop: 16,
+          fontSize: 16,
+          textColor: ThemeDefault().primaryColor,
+        ),
+        CustomText(
+          text: "Sign in to continue",
+          paddingTop: 8,
+          textColor: ThemeDefault().secondaryTextColor,
+        ),
         const TextField(
           decoration: InputDecoration(labelText: "Your email"),
         ),
@@ -27,14 +36,29 @@ class SignInScreen extends StatelessWidget {
           obscureText: true,
           decoration: InputDecoration(labelText: "Password"),
         ),
-        const ElevatedButton(onPressed: null, child: Text("Sign in")),
-        CustomText(text: "OR", textColor: ThemeDefault().secondaryTextColor,),
-        const ElevatedButton(onPressed: null, child: Text("Login with Google")),
+        const ElevatedButton(onPressed: _buttonAction, child: Text("Sign in")),
+        CustomText(
+          text: "OR",
+          textColor: ThemeDefault().secondaryTextColor,
+        ),
         const ElevatedButton(
-            onPressed: null, child: Text("Login with Facebook")),
-        const Text("Forgot password"),
-        const Text("Don't have an account? Register"),
+            onPressed: _buttonAction, child: Text("Login with Google")),
+        const ElevatedButton(
+            onPressed: _buttonAction, child: Text("Login with Facebook")),
+        CustomText(
+          text: "Forgot password",
+          textColor: ThemeDefault().primaryColor,
+          paddingTop: 16,
+        ),
+        Row(
+          children: [
+            CustomText(text: "Don't have an account? "),
+            CustomText(text: 'Register', textColor: ThemeDefault().primaryColor,)
+          ],
+        ),
       ],
     );
   }
 }
+
+_buttonAction() {}
