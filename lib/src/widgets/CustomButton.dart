@@ -6,6 +6,7 @@ class CustomButton extends StatelessWidget{
   final Color backgroundColor;
   final double width;
   final double height;
+  final double borderRadius;
 
   final double marginTop;
   final double marginBottom;
@@ -20,7 +21,8 @@ class CustomButton extends StatelessWidget{
     
     this.width = double.infinity,
     this.height = double.infinity,
-    
+    this.borderRadius = 0,
+
     this.marginTop = 0,
     this.marginBottom = 0,
     this.marginHorizontal = 0
@@ -36,6 +38,7 @@ class CustomButton extends StatelessWidget{
         right: marginHorizontal
       ),
       child: ClipRRect(
+        borderRadius: BorderRadius.circular(borderRadius),
         child: SizedBox(
           width: width,
           height: height,
