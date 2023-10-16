@@ -18,7 +18,7 @@ class CustomInput extends StatelessWidget {
       this.obscureText = false,
       this.placeholder = "placeholder",
       this.width = double.infinity,
-      this.height = double.infinity,
+      this.height = double.maxFinite,
       this.marginHorizontal = 0,
       this.marginTop = 0,
       this.marginBottom = 0,

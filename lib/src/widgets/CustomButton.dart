@@ -20,7 +20,7 @@ class CustomButton extends StatelessWidget{
     this.backgroundColor = const Color(0xffFFFFFF),
     
     this.width = double.infinity,
-    this.height = double.infinity,
+    this.height = double.maxFinite,
     this.borderRadius = 0,
 
     this.marginTop = 0,
