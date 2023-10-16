@@ -7,6 +7,10 @@ class CustomButton extends StatelessWidget{
   final double width;
   final double height;
 
+  final double marginTop;
+  final double marginBottom;
+  final double marginHorizontal;
+
   const CustomButton({
     super.key, 
     required this.onPressed, 
@@ -15,22 +19,34 @@ class CustomButton extends StatelessWidget{
     this.backgroundColor = const Color(0xffFFFFFF),
     
     this.width = double.infinity,
-    this.height = double.infinity
+    this.height = double.infinity,
+    
+    this.marginTop = 0,
+    this.marginBottom = 0,
+    this.marginHorizontal = 0
     });
   @override
   Widget build(BuildContext context) {
     return
-    ClipRRect(
-      child: SizedBox(
-        width: width,
-        height: height,
-        child: (
-          ElevatedButton(
-            onPressed: onPressed, 
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
-            ), 
-            child: Text(text),)
+    Padding(
+      padding: EdgeInsets.only(
+        top: marginTop,
+        bottom: marginBottom,
+        left: marginHorizontal,
+        right: marginHorizontal
+      ),
+      child: ClipRRect(
+        child: SizedBox(
+          width: width,
+          height: height,
+          child: (
+            ElevatedButton(
+              onPressed: onPressed, 
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
+              ), 
+              child: Text(text),)
+          ),
         ),
       ),
     );
