@@ -5,8 +5,8 @@ class ExploreScore extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return (Column(
-      children: const [
+    return (const Column(
+      children: [
         TextField(decoration: InputDecoration(labelText: "Search")),
         Icon(Icons.search),
         Icon(Icons.favorite),

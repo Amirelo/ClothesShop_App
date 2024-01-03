@@ -1,6 +1,7 @@
 import 'package:clothes_shop/src/colors/theme_default.dart';
-import 'package:clothes_shop/src/widgets/CustomButton.dart';
-import 'package:clothes_shop/src/widgets/CustomText.dart';
+import 'package:clothes_shop/src/widgets/custom_button.dart';
+import 'package:clothes_shop/src/widgets/custom_input.dart';
+import 'package:clothes_shop/src/widgets/custom_text.dart';
 import 'package:clothes_shop/src/widgets/custom_image.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomImage(
+        const CustomImage(
           src: 'assets/images/logo_white.png',
           width: 72,
           height: 72,
@@ -32,13 +33,9 @@ class SignInScreen extends StatelessWidget {
           textColor: ThemeDefault().secondaryTextColor,
           marginBottom: 28,
         ),
-        const TextField(
-          decoration: InputDecoration(labelText: "Your email"),
-        ),
-        const TextField(
-          obscureText: true,
-          decoration: InputDecoration(labelText: "Password"),
-        ),
+
+        const CustomInput(placeholder: "Email", icon: Icons.email,),
+        const CustomInput(placeholder: "Password", icon: Icons.lock),
         const CustomButton(onPressed: _buttonAction, text: "Sign in"),
         CustomText(
           text: "OR",

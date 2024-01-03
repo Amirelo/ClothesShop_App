@@ -12,10 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         home: Scaffold(
-            resizeToAvoidBottomInset: true,
-            body: SafeArea(
-                child: Center(
-      child: SignInScreen()
-    ))));
+            resizeToAvoidBottomInset: false,
+            body: SafeArea(child: Center(child: SignInScreen()))));
   }
 }

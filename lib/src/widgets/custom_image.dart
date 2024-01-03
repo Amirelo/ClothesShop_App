@@ -12,7 +12,7 @@ class CustomImage extends StatelessWidget {
   final double marginBottom;
   final double marginHorizontal;
 
- CustomImage(
+ const CustomImage(
       {super.key,
       required this.src,
       this.type = "asset",
