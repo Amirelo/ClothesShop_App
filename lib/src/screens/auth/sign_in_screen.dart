@@ -47,23 +47,47 @@ class SignInScreen extends StatelessWidget {
           text: "Sign in",
           backgroundColor: ThemeDefault().primaryColor,
         ),
-        CustomText(
-          text: "OR",
-          textColor: ThemeDefault().secondaryTextColor,
+        Padding(
+          padding: const EdgeInsets.only(bottom: 16),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Expanded(
+                child: Divider(),
+              ),
+              CustomText(
+                text: "OR",
+                textColor: ThemeDefault().secondaryTextColor,
+                fontWeight: FontWeight.bold,
+                marginBottom: 0,
+                marginLeft: 16,
+                marginRight: 16,
+              ),
+              const Expanded(child: Divider()),
+            ],
+          ),
         ),
         const CustomButton(onPressed: _buttonAction, text: "Login with Google"),
         const CustomButton(
-            onPressed: _buttonAction, text: "Login with Facebook"),
+          onPressed: _buttonAction,
+          text: "Login with Facebook",
+          marginBottom: 16,
+        ),
         CustomText(
-          text: "Forgot password",
+          text: "Forgot password?",
           textColor: ThemeDefault().primaryColor,
+          fontWeight: FontWeight.bold,
+          fontSize: 12,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const CustomText(text: "Don't have an account? "),
             CustomText(
               text: 'Register',
               textColor: ThemeDefault().primaryColor,
+              fontWeight: FontWeight.bold,
+              fontSize: 12,
             )
           ],
         ),
