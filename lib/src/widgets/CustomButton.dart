@@ -21,10 +21,10 @@ class CustomButton extends StatelessWidget{
     
     this.width = double.infinity,
     this.height = double.maxFinite,
-    this.borderRadius = 0,
+    this.borderRadius = 5,
 
     this.marginTop = 0,
-    this.marginBottom = 0,
+    this.marginBottom = 8,
     this.marginHorizontal = 0
     });
   @override
@@ -37,16 +37,20 @@ class CustomButton extends StatelessWidget{
         left: marginHorizontal,
         right: marginHorizontal
       ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(borderRadius),
-        child: SizedBox(
-          width: width,
-          height: height,
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width * 0.9,
+        height: 56,
+        child: FractionallySizedBox(
           child: (
             ElevatedButton(
               onPressed: onPressed, 
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(borderRadius)
+                  )
+                )
               ), 
               child: Text(text),)
           ),

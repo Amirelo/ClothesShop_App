@@ -1,4 +1,5 @@
 import 'package:clothes_shop/src/colors/ThemeDefault.dart';
+import 'package:clothes_shop/src/widgets/CustomButton.dart';
 import 'package:clothes_shop/src/widgets/CustomText.dart';
 import 'package:flutter/material.dart';
 
@@ -29,6 +30,7 @@ class SignInScreen extends StatelessWidget {
           paddingTop: 8,
           textColor: ThemeDefault().secondaryTextColor,
         ),
+
         const TextField(
           decoration: InputDecoration(labelText: "Your email"),
         ),
@@ -36,15 +38,16 @@ class SignInScreen extends StatelessWidget {
           obscureText: true,
           decoration: InputDecoration(labelText: "Password"),
         ),
-        const ElevatedButton(onPressed: _buttonAction, child: Text("Sign in")),
+
+        const CustomButton(onPressed: _buttonAction, text:"Sign in"),
         CustomText(
           text: "OR",
           textColor: ThemeDefault().secondaryTextColor,
         ),
-        const ElevatedButton(
-            onPressed: _buttonAction, child: Text("Login with Google")),
-        const ElevatedButton(
-            onPressed: _buttonAction, child: Text("Login with Facebook")),
+        const CustomButton(
+            onPressed: _buttonAction, text:"Login with Google"),
+        const CustomButton(
+            onPressed: _buttonAction, text:"Login with Facebook"),
         CustomText(
           text: "Forgot password",
           textColor: ThemeDefault().primaryColor,
@@ -52,7 +55,7 @@ class SignInScreen extends StatelessWidget {
         ),
         Row(
           children: [
-            CustomText(text: "Don't have an account? "),
+            const CustomText(text: "Don't have an account? "),
             CustomText(text: 'Register', textColor: ThemeDefault().primaryColor,)
           ],
         ),
