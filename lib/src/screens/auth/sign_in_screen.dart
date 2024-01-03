@@ -33,10 +33,20 @@ class SignInScreen extends StatelessWidget {
           textColor: ThemeDefault().secondaryTextColor,
           marginBottom: 28,
         ),
-
-        const CustomInput(placeholder: "Email", icon: Icons.email,),
-        const CustomInput(placeholder: "Password", icon: Icons.lock, marginBottom: 12,),
-        CustomButton(onPressed: _buttonAction, text: "Sign in", backgroundColor: ThemeDefault().primaryColor,),
+        const CustomInput(
+          placeholder: "Email",
+          icon: Icons.email,
+        ),
+        const CustomInput(
+          placeholder: "Password",
+          icon: Icons.lock,
+          marginBottom: 12,
+        ),
+        CustomButton(
+          onPressed: _buttonAction,
+          text: "Sign in",
+          backgroundColor: ThemeDefault().primaryColor,
+        ),
         CustomText(
           text: "OR",
           textColor: ThemeDefault().secondaryTextColor,

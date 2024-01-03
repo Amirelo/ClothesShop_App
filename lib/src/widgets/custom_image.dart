@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomImage extends StatelessWidget {
@@ -12,7 +11,7 @@ class CustomImage extends StatelessWidget {
   final double marginBottom;
   final double marginHorizontal;
 
- const CustomImage(
+  const CustomImage(
       {super.key,
       required this.src,
       this.type = "asset",
@@ -27,18 +26,16 @@ class CustomImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: marginTop,
-        bottom: marginBottom,
-        left: marginHorizontal,
-        right: marginHorizontal
-      ),
+          top: marginTop,
+          bottom: marginBottom,
+          left: marginHorizontal,
+          right: marginHorizontal),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(borderRadius),
         child: SizedBox(
-          width: width,
-          height: height,
-          child: type == "asset" ? Image.asset(src) : Image.network(src)
-          ) ,
+            width: width,
+            height: height,
+            child: type == "asset" ? Image.asset(src) : Image.network(src)),
       ),
     );
   }

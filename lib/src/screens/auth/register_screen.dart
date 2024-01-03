@@ -18,18 +18,11 @@ class RegisterScreen extends StatelessWidget {
             )),
         const Text("Let's get started"),
         const Text("Create a new account"),
+        const TextField(decoration: InputDecoration(labelText: "Full name")),
+        const TextField(decoration: InputDecoration(labelText: "Your email")),
+        const TextField(decoration: InputDecoration(labelText: "Password")),
         const TextField(
-          decoration: InputDecoration(labelText: "Full name")
-        ),
-        const TextField(
-          decoration: InputDecoration(labelText: "Your email")
-        ),
-        const TextField(
-          decoration: InputDecoration(labelText: "Password")
-        ),
-        const TextField(
-          decoration: InputDecoration(labelText: "Confirm password")
-        ),
+            decoration: InputDecoration(labelText: "Confirm password")),
         const ElevatedButton(onPressed: null, child: Text("Sign up")),
         const Text("Have an account? Sign in")
       ],

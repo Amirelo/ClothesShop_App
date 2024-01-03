@@ -53,7 +53,9 @@ class CustomButton extends StatelessWidget {
                 marginBottom: 0,
                 fontWeight: FontWeight.bold,
                 fontSize: 14,
-                textColor: backgroundColor == ThemeDefault().backgroundColor ? ThemeDefault().textColor : ThemeDefault().backgroundColor,
+                textColor: backgroundColor == ThemeDefault().backgroundColor
+                    ? ThemeDefault().textColor
+                    : ThemeDefault().backgroundColor,
               ))),
         ),
       ),

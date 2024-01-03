@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomInput extends StatefulWidget {
@@ -23,13 +22,12 @@ class CustomInput extends StatefulWidget {
       this.borderRadius = 5,
       this.icon});
 
-
   @override
   State<CustomInput> createState() => _CustomInputState();
 }
 
 class _CustomInputState extends State<CustomInput> {
-  void changeVisibility(obscureText){
+  void changeVisibility(obscureText) {
     obscureText = !obscureText;
     debugPrint("obscure text: $obscureText");
   }
@@ -55,12 +53,13 @@ class _CustomInputState extends State<CustomInput> {
             prefixIcon: Icon(widget.icon),
             suffixIcon: widget.icon == Icons.lock
                 ? IconButton(
-                    icon: obscureText ? const Icon(Icons.visibility) : const Icon(Icons.visibility_off),
-                    onPressed: (){
-                      setState((){
+                    icon: obscureText
+                        ? const Icon(Icons.visibility)
+                        : const Icon(Icons.visibility_off),
+                    onPressed: () {
+                      setState(() {
                         changeVisibility(obscureText);
                       });
-                      
                     },
                   )
                 : null,

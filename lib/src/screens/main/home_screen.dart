@@ -11,7 +11,11 @@ class HomeScreen extends StatelessWidget {
         const Icon(Icons.search),
         const Icon(Icons.favorite),
         const Icon(Icons.notifications),
-        Image.asset('assets/images/logo_blue.png', width: 343208, height: 100,),
+        Image.asset(
+          'assets/images/logo_blue.png',
+          width: 343208,
+          height: 100,
+        ),
         const Icon(Icons.fiber_manual_record),
         const Text("Category"),
         const Text("More Category"),
@@ -19,7 +23,11 @@ class HomeScreen extends StatelessWidget {
         const Text("See More"),
         const Text("Mega Sale"),
         const Text("See More"),
-        Image.asset('assets/images/logo_blue.png', width: 343208, height: 100,),
+        Image.asset(
+          'assets/images/logo_blue.png',
+          width: 343208,
+          height: 100,
+        ),
       ],
     ));
   }
