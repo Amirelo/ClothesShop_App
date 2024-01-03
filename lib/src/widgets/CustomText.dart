@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class CustomText extends StatelessWidget {
   final String text;
   final Color textColor;
-  final double paddingTop;
-  final double paddingBottom;
-  final double paddingLeft;
-  final double paddingRight;
+  final double marginTop;
+  final double marginBottom;
+  final double marginLeft;
+  final double marginRight;
 
   final FontWeight fontWeight;
   final double fontSize;
@@ -15,10 +15,10 @@ class CustomText extends StatelessWidget {
       {super.key,
       required this.text,
       this.textColor = const Color(0xff212121),
-      this.paddingTop = 0,
-      this.paddingBottom = 0,
-      this.paddingLeft = 0,
-      this.paddingRight = 0,
+      this.marginTop = 0,
+      this.marginBottom = 8,
+      this.marginLeft = 0,
+      this.marginRight = 0,
       this.fontWeight = FontWeight.normal,
       this.fontSize = 14});
 
@@ -26,16 +26,17 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-          top: paddingTop,
-          left: paddingLeft,
-          bottom: paddingBottom,
-          right: paddingRight),
+          top: marginTop,
+          left: marginLeft,
+          bottom: marginBottom,
+          right: marginRight),
       child: Text(
         text,
         style: TextStyle(
           color: textColor, 
           fontWeight: fontWeight,
           fontSize: fontSize,
+          letterSpacing: 0.5,
           ),
       ),
     );

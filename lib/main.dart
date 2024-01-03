@@ -1,6 +1,4 @@
-import 'package:clothes_shop/src/screens/auth/RegisterScreen.dart';
-import 'package:clothes_shop/src/screens/auth/SignInScreen.dart';
-import 'package:clothes_shop/src/screens/auth/SplashScreen.dart';
+import 'package:clothes_shop/src/screens/auth/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         home: Scaffold(
+            resizeToAvoidBottomInset: true,
             body: SafeArea(
                 child: Center(
       child: SignInScreen()

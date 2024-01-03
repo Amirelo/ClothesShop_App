@@ -1,10 +1,9 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
 class CustomImage extends StatelessWidget {
   final String src;
-  final int type;
+  final String type;
   final double width;
   final double height;
   final double borderRadius;
@@ -13,12 +12,12 @@ class CustomImage extends StatelessWidget {
   final double marginBottom;
   final double marginHorizontal;
 
-  const CustomImage(
+ CustomImage(
       {super.key,
       required this.src,
-      required this.type,
-      this.width = double.infinity,
-      this.height = double.maxFinite,
+      this.type = "asset",
+      this.width = 100,
+      this.height = 100,
       this.borderRadius = 0,
       this.marginTop = 0,
       this.marginBottom = 0,
@@ -38,7 +37,7 @@ class CustomImage extends StatelessWidget {
         child: SizedBox(
           width: width,
           height: height,
-          child: type == 0 ? Image.asset(src) : Image.network(src)
+          child: type == "asset" ? Image.asset(src) : Image.network(src)
           ) ,
       ),
     );
