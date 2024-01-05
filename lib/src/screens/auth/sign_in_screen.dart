@@ -1,10 +1,12 @@
 import 'package:clothes_shop/src/colors/theme_default.dart';
+import 'package:clothes_shop/src/screens/auth/forgot_password.dart';
 import 'package:clothes_shop/src/screens/auth/register_screen.dart';
 import 'package:clothes_shop/src/screens/main/home_screen.dart';
 import 'package:clothes_shop/src/widgets/custom_button.dart';
 import 'package:clothes_shop/src/widgets/custom_input.dart';
 import 'package:clothes_shop/src/widgets/custom_text.dart';
 import 'package:clothes_shop/src/widgets/custom_image.dart';
+import 'package:clothes_shop/src/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -20,6 +22,11 @@ class SignInScreen extends StatelessWidget {
     void onRegisterPressed() {
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => const RegisterScreen()));
+    }
+
+    void onForgotPasswordPressed() {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const ForgotPassword()));
     }
 
     return Scaffold(
@@ -87,21 +94,20 @@ class SignInScreen extends StatelessWidget {
             text: "Login with Facebook",
             marginBottom: 16,
           ),
-          CustomText(
+          CustomTextButton(
             text: "Forgot password?",
             textColor: ThemeDefault().primaryColor,
-            fontWeight: FontWeight.bold,
-            fontSize: 12,
+            onPressed: onForgotPasswordPressed,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               const CustomText(text: "Don't have an account? "),
-              CustomButton(
+              CustomTextButton(
                 text: 'Register',
                 onPressed: onRegisterPressed,
-                width: 120,
+                textColor: ThemeDefault().primaryColor,
               )
             ],
           ),

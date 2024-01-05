@@ -20,7 +20,7 @@ class CustomButton extends StatelessWidget {
       required this.text,
       this.backgroundColor = const Color(0xffFFFFFF),
       this.width = double.infinity,
-      this.height = double.maxFinite,
+      this.height = 56,
       this.borderRadius = 5,
       this.marginTop = 0,
       this.marginBottom = 8,
@@ -37,7 +37,7 @@ class CustomButton extends StatelessWidget {
         width: width != double.infinity
             ? width
             : MediaQuery.of(context).size.width * 0.9,
-        height: 56,
+        height: height,
         child: FractionallySizedBox(
           child: (ElevatedButton(
               onPressed: onPressed,
