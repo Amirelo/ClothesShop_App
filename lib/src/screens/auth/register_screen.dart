@@ -1,3 +1,4 @@
+import 'package:clothes_shop/src/widgets/custom_scafford.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class RegisterScreen extends StatelessWidget {
       Navigator.pop(context);
     }
 
-    return Scaffold(
+    return CustomScafford(
       body: (Column(
         children: [
           Padding(

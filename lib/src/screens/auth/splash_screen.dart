@@ -1,3 +1,4 @@
+import 'package:clothes_shop/src/widgets/custom_scafford.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -5,21 +6,15 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return (Scaffold(
+    return (CustomScafford(
       backgroundColor: Colors.blue,
-      body: SafeArea(
-        child: Center(
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(16),
-            child: SizedBox(
-              width: 72,
-              height: 72,
-              child: Image.asset('assets/images/logo_blue.png'),
-            )
-            
-          ),
-        ),
-      ),
+      body: ClipRRect(
+          borderRadius: BorderRadius.circular(16),
+          child: SizedBox(
+            width: 72,
+            height: 72,
+            child: Image.asset('assets/images/logo_blue.png'),
+          )),
     ));
   }
 }

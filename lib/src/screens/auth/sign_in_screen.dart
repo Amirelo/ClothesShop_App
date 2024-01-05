@@ -4,6 +4,7 @@ import 'package:clothes_shop/src/screens/auth/register_screen.dart';
 import 'package:clothes_shop/src/screens/main/home_screen.dart';
 import 'package:clothes_shop/src/widgets/custom_button.dart';
 import 'package:clothes_shop/src/widgets/custom_input.dart';
+import 'package:clothes_shop/src/widgets/custom_scafford.dart';
 import 'package:clothes_shop/src/widgets/custom_text.dart';
 import 'package:clothes_shop/src/widgets/custom_image.dart';
 import 'package:clothes_shop/src/widgets/custom_text_button.dart';
@@ -29,7 +30,7 @@ class SignInScreen extends StatelessWidget {
           MaterialPageRoute(builder: (context) => const ForgotPassword()));
     }
 
-    return Scaffold(
+    return CustomScafford(
       body: Column(
         children: [
           const CustomImage(

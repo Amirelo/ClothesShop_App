@@ -1,3 +1,4 @@
+import 'package:clothes_shop/src/widgets/custom_scafford.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -5,7 +6,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return CustomScafford(
       body: (Column(
         children: [
           const TextField(decoration: InputDecoration(labelText: "Search")),
