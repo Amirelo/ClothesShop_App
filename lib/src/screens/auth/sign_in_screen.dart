@@ -1,4 +1,5 @@
 import 'package:clothes_shop/src/colors/theme_default.dart';
+import 'package:clothes_shop/src/screens/auth/register_screen.dart';
 import 'package:clothes_shop/src/screens/main/home_screen.dart';
 import 'package:clothes_shop/src/widgets/custom_button.dart';
 import 'package:clothes_shop/src/widgets/custom_input.dart';
@@ -14,6 +15,11 @@ class SignInScreen extends StatelessWidget {
     void onSignInPressed() {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+    }
+
+    void onRegisterPressed() {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const RegisterScreen()));
     }
 
     return Scaffold(
@@ -89,13 +95,13 @@ class SignInScreen extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
               const CustomText(text: "Don't have an account? "),
-              CustomText(
+              CustomButton(
                 text: 'Register',
-                textColor: ThemeDefault().primaryColor,
-                fontWeight: FontWeight.bold,
-                fontSize: 12,
+                onPressed: onRegisterPressed,
+                width: 120,
               )
             ],
           ),

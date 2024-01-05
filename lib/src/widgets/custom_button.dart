@@ -34,20 +34,19 @@ class CustomButton extends StatelessWidget {
           left: marginHorizontal,
           right: marginHorizontal),
       child: SizedBox(
-        width: MediaQuery.of(context).size.width * 0.9,
+        width: width != double.infinity
+            ? width
+            : MediaQuery.of(context).size.width * 0.9,
         height: 56,
         child: FractionallySizedBox(
           child: (ElevatedButton(
               onPressed: onPressed,
-              style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(backgroundColor),
-                  shadowColor: MaterialStateProperty.all(backgroundColor),
-                  elevation: MaterialStateProperty.all(2),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(borderRadius)),
-                  )),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: backgroundColor,
+                  shadowColor: backgroundColor,
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(borderRadius))),
               child: CustomText(
                 text: text,
                 marginBottom: 0,
