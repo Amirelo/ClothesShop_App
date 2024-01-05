@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:clothes_shop/src/screens/auth/sign_in_screen.dart';
+import 'package:clothes_shop/src/widgets/custom_image.dart';
 import 'package:clothes_shop/src/widgets/custom_scafford.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void handleTimeOut() {
-      Navigator.push(context,
+      Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (context) => const SignInScreen()));
     }
 
@@ -19,15 +20,16 @@ class SplashScreen extends StatelessWidget {
 
     scheduleSplashTimer(1500);
 
-    return (CustomScafford(
+    return (const CustomScafford(
       backgroundColor: Colors.blue,
-      body: ClipRRect(
-          borderRadius: BorderRadius.circular(16),
-          child: SizedBox(
-            width: 72,
-            height: 72,
-            child: Image.asset('assets/images/logo_blue.png'),
-          )),
+      body: CustomImage(
+        src: 'assets/images/logo_blue.png',
+        width: 72,
+        height: 72,
+        marginBottom: 16,
+        borderRadius: 16,
+        type: "asset",
+      ),
     ));
   }
 }

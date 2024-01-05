@@ -1,4 +1,3 @@
-import 'package:clothes_shop/src/screens/auth/sign_in_screen.dart';
 import 'package:clothes_shop/src/screens/auth/splash_screen.dart';
 import 'package:flutter/material.dart';
 

@@ -65,7 +65,7 @@ class SignInScreen extends StatelessWidget {
           ),
           CustomButton(
             onPressed: onSignInPressed,
-            text: "Sign in",
+            text: "Sign In",
             backgroundColor: ThemeDefault().primaryColor,
           ),
           Padding(

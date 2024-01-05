@@ -1,4 +1,3 @@
-import 'package:clothes_shop/src/colors/theme_default.dart';
 import 'package:clothes_shop/src/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
