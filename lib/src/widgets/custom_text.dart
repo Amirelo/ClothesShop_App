@@ -33,11 +33,10 @@ class CustomText extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          color: textColor,
-          fontWeight: fontWeight,
-          fontSize: fontSize,
-          letterSpacing: 0.5,
-        ),
+            color: textColor,
+            fontWeight: fontWeight,
+            fontSize: fontSize,
+            letterSpacing: 0.5),
       ),
     );
   }
