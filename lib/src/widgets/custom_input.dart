@@ -1,3 +1,5 @@
+import 'package:clothes_shop/src/colors/theme_default.dart';
+import 'package:clothes_shop/src/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class CustomInput extends StatefulWidget {
@@ -49,8 +51,17 @@ class _CustomInputState extends State<CustomInput> {
           decoration: InputDecoration(
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(widget.borderRadius)),
-            labelText: widget.placeholder,
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: ThemeDefault().primaryColor)),
+            label: CustomText(
+              text: widget.placeholder,
+              marginBottom: 0,
+            ),
             prefixIcon: Icon(widget.icon),
+            prefixIconColor: MaterialStateColor.resolveWith((states) =>
+                states.contains(MaterialState.focused)
+                    ? ThemeDefault().primaryColor
+                    : ThemeDefault().textColor),
             suffixIcon: widget.icon == Icons.lock
                 ? IconButton(
                     icon: obscureText
@@ -64,6 +75,10 @@ class _CustomInputState extends State<CustomInput> {
                   )
                 : null,
           ),
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.5,
+              color: ThemeDefault().secondaryTextColor),
         ),
       ),
     );
