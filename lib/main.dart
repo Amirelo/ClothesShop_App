@@ -1,4 +1,5 @@
 import 'package:clothes_shop/src/screens/auth/sign_in_screen.dart';
+import 'package:clothes_shop/src/screens/auth/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +11,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: SignInScreen());
+    return const MaterialApp(home: SplashScreen());
   }
 }
