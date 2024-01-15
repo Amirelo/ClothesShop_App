@@ -14,7 +14,9 @@ class HomeScreen extends StatelessWidget {
           const ItemBanner(
             paddingTop: 16,
           ),
-          ItemCategory(),
+          ItemCategory(
+            title: "Man shirt",
+          ),
           const Icon(Icons.fiber_manual_record),
           const Text("Category"),
           const Text("More Category"),
