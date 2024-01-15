@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class ItemCategory extends StatelessWidget {
   final String title;
+  final String image;
 
-  const ItemCategory({super.key, this.title = ""});
+  const ItemCategory({super.key, this.title = "", this.image = ""});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class ItemCategory extends StatelessWidget {
                 border: Border.all(width: 1, color: ThemeDefault().borderColor),
                 borderRadius: BorderRadius.circular(70 / 2),
               ),
-              child: Icon(Icons.air),
+              child: Image.asset(image),
             ),
           ),
           Padding(

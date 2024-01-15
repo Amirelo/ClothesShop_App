@@ -1,7 +1,9 @@
+import 'package:clothes_shop/src/utils/image_path.dart';
 import 'package:clothes_shop/src/widgets/custom_scafford.dart';
 import 'package:clothes_shop/src/widgets/items/item_banner.dart';
 import 'package:clothes_shop/src/widgets/items/item_category.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,8 +16,22 @@ class HomeScreen extends StatelessWidget {
           const ItemBanner(
             paddingTop: 16,
           ),
-          ItemCategory(
-            title: "Man shirt",
+          Container(
+            width: double.maxFinite,
+            height: 200,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: const [
+                ItemCategory(
+                  title: "body",
+                  image: ImagePath.bagMan,
+                ),
+                ItemCategory(
+                  title: "body",
+                  image: ImagePath.bagMan,
+                )
+              ],
+            ),
           ),
           const Icon(Icons.fiber_manual_record),
           const Text("Category"),
